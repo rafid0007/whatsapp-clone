@@ -2,12 +2,25 @@ import styled from "styled-components";
 import {Avatar, Button} from "@material-ui/core";
 
 export const Container = styled.div`
-    
+  flex: 0.45;
+  border-right: 1px solid whitesmoke;
+  height: 100vh;
+  max-width: 350px;
+  min-width: 300px;
+  overflow-y: scroll;
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  
 `;
 
 export const Header = styled.div`
   display: flex;
   position: sticky;
+  top: 0;
   background-color: white;
   z-index: 1;
   justify-content: space-between;
@@ -16,6 +29,8 @@ export const Header = styled.div`
   height: 80px;
   border-bottom: 1px solid whitesmoke;
 `;
+
+export const IconsContainer = styled.div``;
 
 export const UserAvatar = styled(Avatar)`
   cursor: pointer;
