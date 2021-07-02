@@ -32,6 +32,13 @@ const ChatScreen = ({chat, messages}) => {
             .orderBy("timestamp", 'asc')
     )
 
+    const scrollToBottom = () => {
+        endOfMessagesRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        })
+    }
+
     const showMessages = () => {
         scrollToBottom();
         if (messagesSnapshot) {
@@ -64,13 +71,6 @@ const ChatScreen = ({chat, messages}) => {
             photoUrl: user.photoURL,
         })
         setInput("");
-    }
-
-    const scrollToBottom = () => {
-        endOfMessagesRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        })
     }
 
     const recipientEmail = getRecipientEmail(chat.users, user);
