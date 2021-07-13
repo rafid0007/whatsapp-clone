@@ -34,7 +34,7 @@ const ChatScreen = ({chat, messages}) => {
 
     const scrollToBottom = () => {
         if (endOfMessagesRef) {
-            endOfMessagesRef.scrollIntoView({
+            endOfMessagesRef.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
             })
@@ -73,6 +73,7 @@ const ChatScreen = ({chat, messages}) => {
         })
         setInput("");
         scrollToBottom();
+
     }
 
     const recipientEmail = getRecipientEmail(chat.users, user);
