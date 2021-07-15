@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bg from "../../public/bg-1.jpg"
 
 const Container = styled.div``;
 

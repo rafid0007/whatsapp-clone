@@ -1,9 +1,10 @@
+import Image from "next/image";
 import {
     Container,
     EndOfMessages,
     Header,
     HeaderIcons,
-    HeaderInfo, Input,
+    HeaderInfo, Img, Input,
     InputContainer,
     MessageContainer
 } from "./chatScreen.styles";
@@ -19,6 +20,7 @@ import {useRef, useState} from "react";
 import firebase from "firebase";
 import getRecipientEmail from "../../utils/getRecipientEmail";
 import TimeAgo from "timeago-react";
+import bg from "../../public/bg-1.jpg"
 
 const ChatScreen = ({chat, messages}) => {
     const [user] = useAuthState(auth);

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar';
+import {Container} from "../styles/chat.styles";
+import DefaultChatScreen from "../components/DefaultChatScreen";
 
 export default function Home() {
   return (
@@ -11,7 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Sidebar/>
+      <Container>
+          <Sidebar/>
+          <DefaultChatScreen/>
+      </Container>
     </div>
   )
 }

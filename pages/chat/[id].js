@@ -37,17 +37,20 @@ export const getServerSideProps = async context => {
 const Chat = ({chat, messages}) => {
     const [user] = useAuthState(auth);
     return (
-        <Container>
+        <>
             <Head>
                 <title>
                     Chat
                 </title>
             </Head>
-            <Sidebar/>
-            <ChatContainer>
-                <ChatScreen chat={chat} messages={messages}/>
-            </ChatContainer>
-        </Container>
+
+            <Container>
+                <Sidebar/>
+                <ChatContainer>
+                    <ChatScreen chat={chat} messages={messages}/>
+                </ChatContainer>
+            </Container>
+        </>
     );
 };
 

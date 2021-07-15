@@ -8,6 +8,7 @@ const Container = styled.div`
 `;
 
 const LoginContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
